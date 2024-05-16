@@ -1,0 +1,205 @@
+:root {
+    --font-family: "Montserrat", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 16px;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+}
+
+ul,
+li {
+    list-style: none;
+}
+#categories {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 392px;
+
+    .item {
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #e2e2f5;
+
+        h2 {
+            font-weight: 600;
+            line-height: 32px;
+            font-size: 1.33333;
+            letter-spacing: 0.04em;
+            color: #2e2f42;
+            margin: 0;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-inline-start: 0%;
+
+            li {
+                color: #2e2f42;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.04em;
+                border-radius: 4px;
+                border: 1px solid #808080;
+                padding: 8px 16px;
+            }
+        }
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    width: 360px;
+    height: 300px;
+    max-width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+#name-input {
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    padding: 16px 8px;
+    margin: 24px 24px 16px 24px;
+    font-family: var(--font-family);
+}
+
+#name-input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.greeting {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    margin: 0 24px;
+}
+
+input {
+    display: block;
+    color: #2e2f42;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin: 8px 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    width: 360px;
+    height: 40px;
+}
+
+form {
+    max-width: 408px;
+    margin: 0 24px;
+
+    label {
+        color: #2e2f42;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+
+        input {
+            margin-top: 8px;
+        }
+    }
+
+    label:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    button {
+        margin-top: 16px;
+    }
+}
+
+button {
+    font-family: var(--font-family);
+    display: block;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border-radius: 8px;
+    background: #4e75ff;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6c8cff;
+}
+
+button[data-create] {
+    width: 120px;
+    height: 40px;
+    margin: 0;
+}
+button[data-destroy] {
+    width: 120px;
+    height: 40px;
+    background: #ff4e4e;
+}
+
+button[data-destroy]:hover {
+    background: #ff7070;
+}
+
+#controls,
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 8px;
+    background: #e2e2f5;
+    margin-bottom: 16px;
+}
+
+#controls {
+    input[type="number"] {
+        width: 150px;
+        margin: 0;
+    }
+}
