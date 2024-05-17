@@ -16,16 +16,18 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 const loadImages = (imageData) => {
+    const fragment = document.createDocumentFragment();
+
     imageData.forEach((image) => {
         const li = document.createElement("li");
-
         const img = document.createElement("img");
         img.src = image.url;
         img.alt = image.alt;
-
         li.appendChild(img);
-
-        gallery.appendChild(li);
+        fragment.appendChild(li);
     });
+
+    gallery.appendChild(fragment);
 };
+
 loadImages(images);
